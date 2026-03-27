@@ -1,5 +1,13 @@
 const socket = io(); // Conectar al servidor
 
+const canvas = document.getElementById('whiteboard');
+const ctx = canvas.getContext('2d');
+
+// ESTO ES VITAL: Ajustar al tamaño de la pantalla
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+
 // MODIFICAR tu función draw actual para incluir esto al final:
 function draw(e) {
     if (!drawing) return;

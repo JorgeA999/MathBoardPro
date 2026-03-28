@@ -1,22 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta autor="Jorge Alirio Mendoza Rincon">
-
-    <link rel="stylesheet" href="style.css">
-    <title>MathBoard Real-Time</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MathBoard Olimpiadas</title>
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="toolbar">
-        <input type="color" id="colorPicker" value="#2c3e50">
-        <input type="range" id="sizePicker" min="1" max="20" value="3">
-        <button id="clearBtn">Clear Board</button>
-    </div>
-    <canvas id="whiteboard"></canvas>
 
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="canvas.js"></script>
+<body>
+
+<header class="toolbar">
+    <h1>MathBoard ⚡</h1>
+    <h4>Olimpiadas Matemáticas <br> Jorge Alirio Mendza Rincón</h4>
+    <div class="tools">
+        <button data-tool="pen">✏️</button>
+        <button data-tool="line">📏</button>
+        <button data-tool="text">🔤</button>
+        <button data-tool="highlighter">🖍️</button>
+        <button data-tool="eraser">🧽</button>
+    </div>
+
+    <div class="colors">
+        <button data-color="#000000" style="background:#000"></button>
+        <button data-color="#ff0000" style="background:#f00"></button>
+        <button data-color="#0000ff" style="background:#00f"></button>
+        <button data-color="#00aa00" style="background:#0a0"></button>
+    </div>
+
+    <input type="range" id="sizePicker" min="1" max="25" value="3">
+    <button id="clearBtn">🧹</button>
+</header>
+
+<canvas id="whiteboard"></canvas>
+
+<script type="module" src="app.js"></script>
 </body>
+<footer class="mi footer">
+    <p>&copy; 2026 MathBoard Olimpiadas. Todos los derechos reservados.</p>
+    <p>&copy; Autor:JAMR.</p>
+    <p>mi App MathBoard.</p>
+</footer>
 </html>

@@ -1,12 +1,36 @@
-body { margin: 0; overflow: hidden; font-family: sans-serif; background: #f8f9fa; }
-canvas { display: block; cursor: crosshair; }
-.toolbar {
-    position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
-    background: white; padding: 10px 20px; border-radius: 50px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; gap: 15px; align-items: center;
+body {
+    margin: 0;
+    font-family: Arial;
+    overflow: hidden;
 }
-button { border: none; background: #e74c3c; color: white; padding: 8px 15px; border-radius: 20px; cursor: pointer; }
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e293b;
+    color: white;
+    padding: 10px;
+}
+
+.tools button,
+.colors button {
+    margin: 2px;
+    cursor: pointer;
+}
+
+.colors button {
+    width: 25px;
+    height: 25px;
+    border: none;
+}
 
 canvas {
-  display: block;
+    background: rgb(136, 235, 180);
+    display: block;
+}
+
+mi footer {
+    background: rgb(240, 231, 114);
+    display: block;
 }
